@@ -13,7 +13,7 @@ def start_bot(client, token):
     @client.event
     async def on_ready():
         print('Bot is online.')
-        await client.change_presence(status=discord.Status.idle, activity=discord.Game('Alvin so fat yuh'))
+        await client.change_presence(status=discord.Status.idle, activity=discord.Game('Alvin so fat yuh'), owner_id=252127360063766529)
 
     client.run(token)
     
