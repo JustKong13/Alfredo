@@ -39,7 +39,7 @@ class Command(commands.Cog):
                                   type='rich')
         embed_var.set_author(name="Alfredo Bot", 
                              url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=LucasLucas",
-                             icon_url='https://lh3.googleusercontent.com/3cSB32pX5QEEvG6yLLBPyDLOx6814WwGqrOlg8I4PkXeMZcdFrZhb28LGtYRgS_WHqps=s136')
+                             icon_url='https://static.scientificamerican.com/sciam/cache/file/ACF0A7DC-14E3-4263-93F438F6DA8CE98A_source.jpg?w=590&h=800&896FA922-DF63-4289-86E2E0A5A8D76BE1')
         embed_var.add_field(name="{}".format(question), value=random.choice(pred), inline=True)
         embed_var.set_image(url='https://img.favpng.com/7/20/18/magic-8-ball-8-ball-pool-eight-ball-clip-art-png-favpng-pVBbqBupeRZSUSYfJK5E18NGd.jpg')
         embed_var.set_footer(text="Magic 8 Ball, Wikipedia")
@@ -88,7 +88,7 @@ class Command(commands.Cog):
         embed_var = discord.Embed(colour=400597, 
                                   type='rich')
         embed_var.set_author(name="Alfredo Bot",
-                             icon_url='https://lh3.googleusercontent.com/3cSB32pX5QEEvG6yLLBPyDLOx6814WwGqrOlg8I4PkXeMZcdFrZhb28LGtYRgS_WHqps=s136')
+                             icon_url='https://static.scientificamerican.com/sciam/cache/file/ACF0A7DC-14E3-4263-93F438F6DA8CE98A_source.jpg?w=590&h=800&896FA922-DF63-4289-86E2E0A5A8D76BE1')
         embed_var.add_field(name="Bot is up and running", value=f'Alfredo bot is running at {self.client.latency * 1000}ms.')
         await ctx.channel.send(embed=embed_var)
 
@@ -111,7 +111,7 @@ class Command(commands.Cog):
                                           type='rich')
                 embed_var.set_author(name="Alfredo Bot", 
                                      url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=LucasLucas",
-                                     icon_url='https://lh3.googleusercontent.com/3cSB32pX5QEEvG6yLLBPyDLOx6814WwGqrOlg8I4PkXeMZcdFrZhb28LGtYRgS_WHqps=s136')
+                                     icon_url='https://static.scientificamerican.com/sciam/cache/file/ACF0A7DC-14E3-4263-93F438F6DA8CE98A_source.jpg?w=590&h=800&896FA922-DF63-4289-86E2E0A5A8D76BE1')
                 embed_var.add_field(name="Alfredo's responses to '{}' are:".format(text), value=response, inline=False)
                 await ctx.channel.send(embed=embed_var)
 
@@ -126,7 +126,7 @@ class Command(commands.Cog):
                                       type='rich')
             embed_var.set_author(name='Alfredo Bot',
                                  url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=LucasLucas",
-                                 icon_url='https://lh3.googleusercontent.com/3cSB32pX5QEEvG6yLLBPyDLOx6814WwGqrOlg8I4PkXeMZcdFrZhb28LGtYRgS_WHqps=s136')
+                                 icon_url='https://static.scientificamerican.com/sciam/cache/file/ACF0A7DC-14E3-4263-93F438F6DA8CE98A_source.jpg?w=590&h=800&896FA922-DF63-4289-86E2E0A5A8D76BE1')
             embed_var.add_field(name="Your term was not found. This is what I respond to:", value=response, inline=False) 
             await ctx.channel.send(embed=embed_var)
 
@@ -146,14 +146,13 @@ class Command(commands.Cog):
                                       type='rich')
             embed_var.set_author(name='Alfredo Bot',
                                  url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=LucasLucas",
-                                 icon_url='https://lh3.googleusercontent.com/3cSB32pX5QEEvG6yLLBPyDLOx6814WwGqrOlg8I4PkXeMZcdFrZhb28LGtYRgS_WHqps=s136')
+                                 icon_url='https://static.scientificamerican.com/sciam/cache/file/ACF0A7DC-14E3-4263-93F438F6DA8CE98A_source.jpg?w=590&h=800&896FA922-DF63-4289-86E2E0A5A8D76BE1')
             embed_var.add_field(name="This is what I respond to: ", value=response)
             await ctx.channel.send(embed=embed_var)
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
-        if isinstance(error, commands.CommandNotFound):
-            await ctx.channel.send("That command doesn't appear to exist. Use $help for help.") 
-
+        pass
+    
 def setup(client):
     client.add_cog(Command(client))
